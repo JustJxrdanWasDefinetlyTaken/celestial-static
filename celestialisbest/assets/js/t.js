@@ -13,7 +13,7 @@ fetch("/celestialisbest/assets/json/tools.json")
         var card = document.createElement("div");
         card.className = "card";
         card.onclick = () =>
-            location.href = `/tab.html?autofill=${encodeURIComponent(g.url)}`;
+            location.href = `/celestialisbest/tab.html?autofill=${encodeURIComponent(g.url)}`;
         card.innerHTML = `<div class="thumb" style="background-image:url('${g.img || "/celestialisbest/assets/img/placeholder.png"}')"></div><p>${g.name}</p>`;
         grid.appendChild(card);
       });

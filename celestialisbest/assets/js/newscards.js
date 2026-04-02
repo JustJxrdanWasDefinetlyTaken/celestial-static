@@ -44,7 +44,7 @@ function showGames(list) {
         : (location.href =
             g.source === "local"
               ? g.url
-              : `/tab.html?autofill=${encodeURIComponent(g.url)}`);
+              : `/celestialisbest/tab.html?autofill=${encodeURIComponent(g.url)}`);
     card.innerHTML = cardHTML;
     grid.appendChild(card);
 
