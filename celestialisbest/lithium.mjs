@@ -22,7 +22,7 @@ const connection = ""
 //////////////////////////////
 ///           SW           ///
 //////////////////////////////
-const stockSW = "./ultraworker.js";
+const stockSW = "/celestialisbest/ultraworker.js";
 const swAllowedHostnames = ["localhost", "127.0.0.1"];
 
 /**
@@ -83,10 +83,10 @@ registerSW()
 /**
  * Creates a valid URL from input or returns a search URL.
  * @param {string} input - The input string or URL.
- * @param {string} [template="https://search.brave.com/search?q=%s"] - Search URL template.
+ * @param {string} [template="https://duckduckgo.com/?q=%s"] - Search URL template.
  * @returns {string} Valid URL string.
  */
-export function makeURL(input, template = "https://search.brave.com/search?q=%s") {
+export function makeURL(input, template = "https://duckduckgo.com/search?q=%s") {
 	try {
 		return new URL(input).toString();
 	} catch (err) { }
@@ -170,7 +170,7 @@ export class Tab {
 		this.frame = document.createElement("iframe");
 		this.frame.setAttribute("class", "searchframe");
 		this.frame.setAttribute("title", "P-Frame");
-		this.frame.setAttribute("src", "/celestialisbest/tab.html");
+		this.frame.setAttribute("src", "./tab.html");
 		this.frame.setAttribute("loading", "lazy");
 		this.frame.setAttribute("id", `frame-${tabCounter}`);
 		framesElement.appendChild(this.frame);
